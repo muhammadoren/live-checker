@@ -1,0 +1,13 @@
+services:
+  - type: worker
+    name: telegram-facebook-uid-monitor
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    autoDeploy: true
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: ALLOWED_CHAT_ID
+        sync: false
+        
